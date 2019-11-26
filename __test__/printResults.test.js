@@ -1,19 +1,17 @@
 const { numberPrinter } = require('../printResults.js');
 
-global.console = {
-	log: jest.fn(),
-};
-
 jest.spyOn(console, 'log');
 
 describe('numberPrinter', () => {
-	test('prints number less than 5 only', () => {
+	test('prints number less than 5 because it is lazy', () => {
 		const invalidNum = 4;
 
 		numberPrinter(invalidNum);
 
-		expect(global.console.log).toHaveBeenCalledWith(4);
+		expect(console.log).toHaveBeenCalledWith(4);
 	});
 });
 
-
+//  should probably write a new function?
+//  could refactor since it is just being lazy!
+//  could show what happens if only 4s are printed. extend on testing.
