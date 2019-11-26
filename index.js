@@ -1,5 +1,5 @@
 // this branch has two unit tests. One of which are asynchornous.
-
+// See assertions or breaking-integration branches to see printResult function
 function multipliesByFive(num) {
   if (typeof num !== "number") {
     throw new Error("Please provide a number!");
