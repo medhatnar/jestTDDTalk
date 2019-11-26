@@ -33,3 +33,13 @@ describe("multiplyByFiveSlowly", () => {
         })
   })
 });
+
+describe(printMultipliesByFive, () => {
+    it('should print a number multiplied by 5', () => {
+        const logger = jest.fn(console, 'log');
+
+        printMultipliesByFive(num);
+
+        expect(logger).toHaveBeenCalled();
+    })
+})

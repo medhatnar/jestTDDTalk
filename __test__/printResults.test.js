@@ -1,9 +1,5 @@
 const { numberPrinter } = require('../printResults.js');
 
-global.console = {
-	log: jest.fn(),
-};
-
 jest.spyOn(console, 'log');
 
 describe('numberPrinter', () => {
