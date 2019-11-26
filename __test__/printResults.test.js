@@ -11,7 +11,3 @@ describe('numberPrinter', () => {
 		expect(console.log).toHaveBeenCalledWith(4);
 	});
 });
-
-//  should probably write a new function?
-//  could refactor since it is just being lazy!
-//  could show what happens if only 4s are printed. extend on testing.
