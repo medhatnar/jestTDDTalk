@@ -1,3 +1,6 @@
+// this branch includes working unit tests but a failing integration test
+// hint: print results and its test needs to be refactored
+
 const { numberPrinter } = require('./printResults.js');
 
 function multipliesByFive(num) {
