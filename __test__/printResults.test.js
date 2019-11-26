@@ -1,14 +1,14 @@
 const { numberPrinter } = require('../printResults.js');
 
-jest.spyOn(console, 'log');
 
 describe('numberPrinter', () => {
 	test('prints number less than 5 only', () => {
+		const myLogger = jest.spyOn(console, 'log');
 		const invalidNum = 4;
 
 		numberPrinter(invalidNum);
 
-		expect(global.console.log).toHaveBeenCalledWith(4);
+		expect(myLogger).toHaveBeenCalledWith(4);
 	});
 });
 
