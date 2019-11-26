@@ -1,3 +1,6 @@
+// this file has working unit tests but no print multiplied by 5 function/test
+// if you would like to see that function test. go to breaking-integration branch
+
 function multipliesByFive(num) {
   if (typeof num !== "number") {
     throw new Error("Please provide a number!");
