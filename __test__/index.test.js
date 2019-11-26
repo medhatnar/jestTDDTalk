@@ -1,12 +1,16 @@
-var { multipliesByFive, multipliesByFiveSlowly } = require("./index.js");
+const { multipliesByFive, multipliesByFiveSlowly } = require("../index.js");
 
 describe("multipliesByFive", () => {
   test("multiplies a given number by 5", () => {
-    expect(multipliesByFive(10)).toBe(50);
+    const testNum = 10;
+
+    expect(multipliesByFive(testNum)).toBe(50);
   });
 
   test("throws error on invalid input", () => {
-    expect(() => multipliesByFive("abc")).toThrowError(
+    const invalidInput = "foobar";
+
+    expect(() => multipliesByFive(invalidInput)).toThrowError(
       new Error("Please provide a number!")
     );
   });
@@ -14,8 +18,9 @@ describe("multipliesByFive", () => {
 
 describe("multiplyByFiveSlowly", () => {
   test("multiplies a given number by 5, slowly", () => {
-    expect.assertions(1); // why do this??
-    return multipliesByFiveSlowly(10).then(result =>
+    const testNum = 10;
+    
+    return multipliesByFiveSlowly(testNum).then(result =>
       expect(result).toEqual(50)
     );
   });
